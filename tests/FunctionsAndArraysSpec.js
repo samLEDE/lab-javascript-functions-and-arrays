@@ -244,3 +244,85 @@ describe('Bonus Quest - greatestProduct', function () {
   });
 });
 
+//num1
+var maxOfTwoNumbers = function(num1,num2) {
+  if(num1>num2) {
+    return num1;
+  }else{
+  return num2;
+  }
+}
+
+//num2
+
+var findLongestWord = function(wordsArray) {
+  var longestWord=0, longestLength=0;
+  for(var i=0;i<=wordsArray.length-1;i++) {
+    if (wordsArray[i].length >longestLength) {
+      longestWord = i;
+      longestLength=wordsArray[i].length
+    }
+  }
+  return wordsArray[longestWord];
+}
+
+//num3
+
+
+function sumArray(numbers){
+  var sumOfNumbers=0
+  for(var i = 0; i < numbers.length; i++){
+  sumOfNumbers= sumOfNumbers + numbers[i];
+  }
+  return sumOfNumbers 
+} 
+
+
+//num4
+
+function averageNumbers(numbers){
+  if (numbers.length>0){
+  return sumArray(numbers)/numbers.length
+  } else {
+    return undefined
+  }
+} 
+
+function averageWordLength(words){
+  var totalNumber = 0
+  for (var i = 0; i < words.length; i++){
+    totalNumber += words[i].length
+  } if (words.length>0){
+  return totalNumber / words.length
+} else {
+  return undefined
+}
+}
+
+//num5
+
+function uniquifyArray(words){
+  var uniqueArray = [];
+  var duplicateFound = false;
+  
+  for (var i=0 ;i < words.length; i++){
+    for(var j=0;j<uniqueArray.length;j++) {
+      console.log(words[i],uniqueArray[j]);
+      if (uniqueArray[j]===words[i]) {
+        duplicateFound = true;
+      }
+    }
+    if (duplicateFound === false) {
+      uniqueArray.push(words[i]);
+    }
+    duplicateFound = false;
+
+  }
+  if (uniqueArray) {
+    return uniqueArray;
+  }else {
+    return undefined;
+  }
+  
+}
+
